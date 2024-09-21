@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #2d2e3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    height: auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.outer {
+    position: relative;
+    width: 70vw; 
+    max-width: 300px;
+    height: 70vw;
+    max-height: 300px;
+    background: #2f363e;
+    color: #ccc;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 5px 10px 50px 20px rgba(73, 82, 202, 0.75);
+}
+
+.outer::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(rgba(227, 82, 38, 1), rgba(246, 218, 32, 1), rgba(111, 244, 94, 1), rgb(33, 167, 16), rgba(72, 234, 234, 1), rgb(47, 45, 199));
+    z-index: -1;
+    filter: brightness(1.50);
+}
+
+button {
+    width: 15vw;
+    max-width: 60px;
+    height: 15vw;
+    max-height: 60px;
+    margin-right: 10px;
+    background: #2f363e;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, .5);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+button.active {
+    background: aqua;
+    color: #000;
+}
+
+
+@media (max-width: 600px) {
+    .outer {
+        width: 80vw; 
+        height: 80vw;
+        max-width: none; 
+        max-height: none; 
+    }
+    
+    button {
+        width: 20vw; 
+        height: 20vw;
+    }
+}
+
